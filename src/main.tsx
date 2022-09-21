@@ -1,14 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import { RecoilRoot } from 'recoil';
 import BaseRoute from './routes';
 import 'reset-css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <RecoilRoot>
-      <BaseRoute />
-    </RecoilRoot>
-  </React.StrictMode>,
-  document.getElementById('root')
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
+root.render(
+  <RecoilRoot>
+    <BaseRoute />
+  </RecoilRoot>,
 );

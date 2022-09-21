@@ -6,6 +6,6 @@
   },
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "editor.formatOnSave": true,
-   // sytlelint 14 要加这一行
-  "stylelint.validate": ["css", "scss", "vue"]
+  // sytlelint 14 要加这一行
+  "stylelint.validate": ["css", "scss", "less"]
 }
