@@ -14,8 +14,7 @@
       "eslint --config .eslintrc.js"
     ],
     "*.{less,css,sass,scss}": [
-      "stylelint --fix",
-      "git add"
+      "stylelint --fix"
     ]
   },
   "dependencies": {
