@@ -1,26 +1,25 @@
 import { useRef, useState } from 'react';
 import classNames from 'classnames';
-import { useRecoilState, useResetRecoilState } from 'recoil';
-import { counterState } from '@/store/counter';
+import { useCounterState } from '@/store/counter';
 import style from './index.module.scss';
 const CounterAnimate = () => {
   const numRef = useRef<HTMLParagraphElement | null>(null);
-  const [counter, setCounter] = useRecoilState(counterState);
+  const count = useCounterState((state) => state.count);
+  const increamentCount = useCounterState((state) => state.increament);
+  const resetCounter = useCounterState((state) => state.reset);
   const [isAnimate, setAnimate] = useState(false);
   const changeCounter = (step: number) => {
     setAnimate(true);
-    setCounter(counter => (counter += step));
+    increamentCount(step);
     numRef.current?.addEventListener('animationend', () => {
       setAnimate(false);
     });
   };
-
-  const resetCounter = useResetRecoilState(counterState);
   return (
     <div className={style.counter}>
       <div className={style['counter__show']}>
         <p ref={numRef} className={classNames(style['counter__num'], { [style.bounce]: isAnimate })}>
-          {counter}
+          {count}
         </p>
       </div>
       <div className={style['counter__operate']}>

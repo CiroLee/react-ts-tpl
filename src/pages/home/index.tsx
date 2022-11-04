@@ -9,8 +9,8 @@ const Home: FC = () => {
         <a href="https://github.com/CiroLee/react-ts-tpl" target="_blank" rel="noreferrer">
           react-ts-tpl
         </a>
-        <a href="https://recoiljs.org/zh-hans/docs/introduction/getting-started" target="_blank" rel="noreferrer">
-          Recoil
+        <a href="https://github.com/pmndrs/zustand" target="_blank" rel="noreferrer">
+          zustand
         </a>
         <a href="https://zh-hans.reactjs.org/" target="_blank" rel="noreferrer">
           react
