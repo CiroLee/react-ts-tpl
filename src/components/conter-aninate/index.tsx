@@ -5,12 +5,12 @@ import style from './index.module.scss';
 const CounterAnimate = () => {
   const numRef = useRef<HTMLParagraphElement | null>(null);
   const count = useCounterState((state) => state.count);
-  const increamentCount = useCounterState((state) => state.increament);
+  const incrementCount = useCounterState((state) => state.increment);
   const resetCounter = useCounterState((state) => state.reset);
   const [isAnimate, setAnimate] = useState(false);
   const changeCounter = (step: number) => {
     setAnimate(true);
-    increamentCount(step);
+    incrementCount(step);
     numRef.current?.addEventListener('animationend', () => {
       setAnimate(false);
     });

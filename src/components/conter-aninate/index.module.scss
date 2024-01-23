@@ -51,7 +51,7 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
-    &:not(:last-child):not(:first-child) {
+    &:not(:last-child, :first-child) {
       border-right: 0;
       border-left: 0;
       border-radius: 0;
@@ -68,7 +68,7 @@
 }
 
 @keyframes bounce-ani {
-  from {
+  0% {
     transform: translateY(0);
   }
   60% {
@@ -80,7 +80,7 @@
   90% {
     transform: translateY(4px);
   }
-  to {
+  100% {
     transform: translateY(0);
   }
 }

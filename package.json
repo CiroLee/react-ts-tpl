@@ -6,13 +6,13 @@
     "dev": "vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint --config .eslintrc.js",
+    "lint": "eslint --config .eslintrc",
     "lint:css": "stylelint src/**/*.{less,css,sass,scss}",
     "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.{jsx,tsx,ts,js,json}": [
-      "eslint --config .eslintrc.js"
+      "eslint --config .eslintrc"
     ],
     "*.{less,css,sass,scss}": [
       "stylelint --fix"
